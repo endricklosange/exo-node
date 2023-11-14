@@ -1,7 +1,7 @@
 version: '3.3'
 services:
     node:
-        container_name: demo-node
+        container_name: project-api-node
         image: 'node:latest'
         working_dir: /home/node/app
         command:
@@ -15,7 +15,7 @@ services:
         links:
             - mongo
     mongo:
-        container_name: demo-mongo
+        container_name: project-api-mongo
         image: 'mongo:latest'
         ports:
             - '27017:27017'
